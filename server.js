@@ -4,18 +4,18 @@
 var express = require('express');
 var app = express();
 
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
 
-// http://expressjs.com/en/starter/basic-routing.html
+// Serve the index.html file at the entry point 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+// Serve static assests
+app.use(express.static('public'));
 
-// your first API endpoint... 
+// An easter egg greeting endpoint  
 app.get("/api/hello", function (req, res) {
-  res.json({greeting: 'hello API'});
+  res.json({greeting: 'Hi There!  Try the /api/timestamp/:date_string? endpoint 😉'});
 });
 
 function parseTimestamp(date) {
