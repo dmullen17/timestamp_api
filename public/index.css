@@ -16,7 +16,6 @@ body {
     flex: 1;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
 }
 
@@ -24,10 +23,36 @@ li {
     margin-left: 50px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    border-radius: 3px;
+    padding: 2px;
+}
+
+ion-icon {
+    font-size: 16px;
+    padding-left: 3px;
+}
+
+span {
+    padding-right: 3px;
+    padding-left: 4px;
+    font-size: 12px;
+}
+
 .text-container {
     font-size: 3vh;
-    max-width: 47.5vw;
+    max-width: 65vw;
     top: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .clock-container {
@@ -49,6 +74,7 @@ li {
         inset 0 0 0 3px #EFEFEF,
         inset 0 0 10px black,
         0 0 10px rgba(0,0,0,0.2);
+    padding-left: 3vw;
 }
 
 .clock-face {
@@ -68,4 +94,19 @@ li {
     transform: rotate(90deg);
     transition: all .05s;
     transition-timing-function: all cubic-bezier(.1, 2.7, .65, 1);
+}
+
+@media only screen and (max-width: 900px) {
+    .text-container {
+        font-size: 2.25vh;
+    }
+    .clock {
+        padding: 1em;
+        height: 30vh;
+        width: 30vh;   
+        border: 10px solid white;
+    }
+    .hand {
+        height: 3px;
+    }
 }
