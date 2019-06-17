@@ -21,3 +21,5 @@ function setDate() {
 }
 
 setInterval(setDate, 1000);
+
+document.addEventListener("DOMContentLoaded", setDate);

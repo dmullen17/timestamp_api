@@ -96,6 +96,14 @@ span {
     transition-timing-function: all cubic-bezier(.1, 2.7, .65, 1);
 }
 
+.second-hand {
+    height: 4px;
+}
+
+.hour-hand {
+    background: linear-gradient(to left, black 80%, rgba(0,0,0,0) 80%);
+}
+
 @media only screen and (max-width: 900px) {
     .text-container {
         font-size: 2.25vh;
